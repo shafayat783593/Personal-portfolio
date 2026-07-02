@@ -38,13 +38,27 @@ export default function DashboardProjectsPage() {
   const [saving, setSaving] = useState(false);
   const [form, setForm] = useState<ProjectForm>(emptyForm);
 
-  const load = async () => {
-    setLoading(true);
+const load = async () => {
+  setLoading(true);
+
+  try {
     const res = await fetch("/api/projects");
-    const data = await res.json();
+
+    console.log("Status:", res.status);
+
+    const text = await res.text();
+    console.log(text);
+
+    const data = text ? JSON.parse(text) : [];
+
     setProjects(Array.isArray(data) ? data : []);
+  } catch (err) {
+    console.error(err);
+    setProjects([]);
+  } finally {
     setLoading(false);
-  };
+  }
+};
 
   useEffect(() => {
     load();
