@@ -9,7 +9,10 @@ export const profile = {
   phone: "+8801610665069",
   whatsapp: "8801610665069",
   github: "https://github.com/shafayat783593",
-  resumeUrl: "/resume.pdf", // drop your resume.pdf inside /public when ready
+  resumeUrl: "https://drive.google.com/file/d/1JnAZUpopFz6LqsTrLzPN9-ADa6PY6IUq/view?usp=sharing",
+  aboutPhoto:'/'
+  
+  // drop your resume.pdf inside /public when ready
 };
 
 export const socials = [
@@ -17,7 +20,7 @@ export const socials = [
   { name: "Email", href: "mailto:sshapa17@gmail.com", icon: "Mail" },
   { name: "WhatsApp", href: "https://wa.me/8801610665069", icon: "MessageCircle" },
   // add LinkedIn / Twitter / Facebook the same way once you have the links
-  // { name: "LinkedIn", href: "https://linkedin.com/in/yourname", icon: "Linkedin" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/yourname", icon: "Linkedin" },
 ];
 
 export const navLinks = [

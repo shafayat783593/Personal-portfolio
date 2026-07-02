@@ -84,17 +84,54 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.15 }}
           className="relative mx-auto aspect-square w-64 sm:w-80 md:w-full md:max-w-sm"
         >
-          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-violet-500 via-fuchsia-400 to-amber-400 opacity-70 blur-2xl" />
-          <div className="relative h-full w-full animate-float overflow-hidden rounded-[2.5rem] border border-white/20 shadow-glow">
-            <Image
-              src="/images/profile.jpg"
-              alt={profile.name}
-              fill
-              sizes="(max-width: 768px) 320px, 400px"
-              className="object-cover"
-              priority
-            />
+          {/* rotating dashed ring */}
+          <motion.div
+            aria-hidden
+            animate={{ rotate: 360 }}
+            transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+            className="absolute -inset-4 rounded-full border-2 border-dashed border-violet-500/30"
+          />
+
+          {/* soft glow behind the circle */}
+          <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-violet-500 via-fuchsia-400 to-amber-400 opacity-70 blur-2xl" />
+
+          {/* gradient ring + circular photo */}
+          <div className="absolute inset-2 animate-float rounded-full bg-gradient-to-tr from-violet-500 via-fuchsia-400 to-amber-400 p-[6px] shadow-glow">
+            <div className="relative h-full w-full overflow-hidden rounded-full border-4 border-ink-950/80 dark:border-ink-950">
+              <Image
+                src="/images/shafayat-pic.jpg"
+                alt={profile.name}
+                fill
+                sizes="(max-width: 768px) 320px, 400px"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
+
+          {/* floating designation badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-ink-900/10 bg-white/90 px-5 py-2 text-xs font-semibold shadow-card backdrop-blur-xl dark:border-mist-100/10 dark:bg-ink-800/90"
+          >
+            <span className="gradient-text">{profile.designation}</span>
+          </motion.div>
+
+          {/* small orbiting accent dots */}
+          <motion.span
+            aria-hidden
+            className="absolute -right-1 top-6 h-4 w-4 rounded-full bg-amber-400 shadow-glow sm:h-5 sm:w-5"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+          <motion.span
+            aria-hidden
+            className="absolute -left-2 bottom-16 h-3 w-3 rounded-full bg-fuchsia-400 shadow-glow"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+          />
         </motion.div>
       </div>
 
