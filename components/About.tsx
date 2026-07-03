@@ -58,7 +58,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="absolute -bottom-2 left-1/3 w-[85%] -translate-x-1/2 rounded-2xl border border-ink-900/10 bg-white/90 px-5 py-3 text-center shadow-card backdrop-blur-xl dark:border-mist-100/10 dark:bg-ink-800/90"
+              className="absolute -bottom-2 left-2/1 w-[85%] -translate-x-1/2 rounded-2xl border border-ink-900/10 bg-white/90 px-5 py-3 text-center shadow-card backdrop-blur-xl dark:border-mist-100/10 dark:bg-ink-800/90"
             >
               <p className="font-display  text-sm font-semibold">{profile.name}</p>
               <p className="text-xs text-violet-500 dark:text-violet-400">{profile.designation}</p>
