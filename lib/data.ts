@@ -5,22 +5,22 @@ export const profile = {
   designation: "Full Stack Developer",
   tagline: "I build fast, real-time web products end to end.",
   location: "Chattogram, Bangladesh",
-  email: "sshapa17@gmail.com",
+  email: "shafayat783@gmail.com",
   phone: "+8801610665069",
   whatsapp: "8801610665069",
   github: "https://github.com/shafayat783593",
   resumeUrl: "https://drive.google.com/file/d/1JnAZUpopFz6LqsTrLzPN9-ADa6PY6IUq/view?usp=sharing",
-  aboutPhoto:'/'
+
   
   // drop your resume.pdf inside /public when ready
 };
 
 export const socials = [
   { name: "GitHub", href: "https://github.com/shafayat783593", icon: "Github" },
-  { name: "Email", href: "mailto:sshapa17@gmail.com", icon: "Mail" },
+  { name: "Email", href: "mailto:shafayat783@gmail.com", icon: "Mail" },
   { name: "WhatsApp", href: "https://wa.me/8801610665069", icon: "MessageCircle" },
   // add LinkedIn / Twitter / Facebook the same way once you have the links
-  { name: "LinkedIn", href: "https://linkedin.com/in/yourname", icon: "Linkedin" },
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/md-shafayat-hosan", icon: "Linkedin" },
 ];
 
 export const navLinks = [
