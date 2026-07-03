@@ -34,10 +34,10 @@ export const navLinks = [
 
 export const about = {
   heading: "Crafting Digital Experiences",
-  paragraphs: [
-    "My journey into the digital realm began with curiosity during my computer science studies. From mastering HTML/CSS to building complex React and Next.js applications, I've embraced the digital evolution to create immersive web experiences.",
-    "I specialize in developing cutting-edge digital solutions that combine innovative technology with user-centered design — real-time chat, live tracking, and payment systems included. Every line of code is crafted to deliver seamless, responsive, and engaging interactions.",
-    "Beyond the digital world, I find balance in sports and physical activities. This harmony between digital creation and real-world movement fuels my creativity and keeps me sharp.",
+paragraphs: [
+    "My journey into web development began with pure curiosity during my Computer Technology studies — a fascination with turning static ideas into things people could actually click, scroll, and interact with. What started with simple HTML/CSS quickly grew into building full-scale applications with React and Next.js.",
+    "I specialize in building full-stack digital products where performance meets thoughtful design — real-time chat systems, live tracking, and secure payment integrations included. For me, good code isn't just about making things work; it's about making them feel effortless, responsive, and genuinely engaging.",
+    "Outside the screen, I find my balance through sports and physical activities. That contrast — deep focus while solving a bug versus the raw energy of a game — keeps my mind sharp and fuels the creativity I bring into every project.",
   ],
 };
 
