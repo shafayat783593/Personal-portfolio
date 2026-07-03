@@ -30,7 +30,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="eyebrow">Hello, I&apos;m {profile.shortName}</span>
+          <span   style={{ fontSize: "1.25rem"}}
+ className="eyebrow">Hello, Im {profile.name}</span>
 
           <h1 className="mt-4 font-display text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
             <span className="gradient-text">{profile.designation}</span>
