@@ -6,7 +6,11 @@ import { projectsSeed } from "@/lib/data";
 async function getProjects() {
   try {
     await connectDB();
+    console.log("connected db succssfully")
+    
+
     const docs = await Project.find({}).sort({ createdAt: -1 }).lean();
+    
     if (docs.length === 0) return projectsSeed;
     return docs.map((d: any) => ({
       slug: d.slug,

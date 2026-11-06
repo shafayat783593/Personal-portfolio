@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LayoutDashboard, FolderKanban, LogOut, ExternalLink } from "lucide-react";
+import { LayoutDashboard, FolderKanban, Mail, LogOut, ExternalLink } from "lucide-react";
 import LogoutButton from "./LogoutButton";
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
@@ -17,6 +17,9 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           </Link>
           <Link href="/dashboard/projects" className="focus-ring flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-mist-100/5">
             <FolderKanban size={16} /> Projects
+          </Link>
+          <Link href="/dashboard/messages" className="focus-ring flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-mist-100/5">
+            <Mail size={16} /> Messages
           </Link>
           <Link href="/" target="_blank" className="focus-ring flex items-center gap-2.5 rounded-xl px-3 py-2.5 text-sm font-medium hover:bg-mist-100/5">
             <ExternalLink size={16} /> View Site

@@ -16,10 +16,10 @@ export type ProjectCardData = {
 export default function ProjectCard({ project, index }: { project: ProjectCardData; index: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, x: 90 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, delay: (index % 3) * 0.1 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: Math.min(index * 0.08, 0.8) }}
       className="card-surface group flex flex-col overflow-hidden"
     >
       <div className="relative aspect-[16/10] w-full overflow-hidden">

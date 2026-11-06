@@ -9,7 +9,7 @@ export const profile = {
   phone: "+8801610665069",
   whatsapp: "8801610665069",
   github: "https://github.com/shafayat783593",
-  resumeUrl: "https://drive.google.com/file/d/1JnAZUpopFz6LqsTrLzPN9-ADa6PY6IUq/view?usp=sharing",
+  resumeUrl: "https://drive.google.com/file/d/1Ym45xHHhUPU5xN3W9jH-pFbCARjdViH3/view?usp=sharing",
 
   
   // drop your resume.pdf inside /public when ready
@@ -96,7 +96,7 @@ export const projectsSeed = [
   {
     slug: "novashop",
     name: "NovaShop (Arinexa)",
-    image: "/images/project-novashop.svg",
+    image: "https://i.ibb.co/hxXwtsQW/Screenshot-2026-09-26-224304.png",
     summary:
       "Multi-role e-commerce platform with real-time chat, live delivery tracking, and local payment gateways.",
     description:
@@ -125,7 +125,42 @@ export const projectsSeed = [
     improvements:
       "Planned: role-based permissions inside the super admin panel itself, exportable CSV/PDF earnings reports, and webhook-based subscription renewal reminders.",
   },
+    {
+    slug: "salon-saas",
+    name: "Salon Management SaaS",
+    image: "/images/project-salon.svg",
+    summary:
+      "Super admin dashboard for a salon SaaS: subscription management, purchase request review, and earnings analytics.",
+    description:
+      "A super-admin dashboard for a multi-tenant salon management SaaS. Built with Mongoose aggregation pipelines for earnings summaries, paginated tables with skeleton loading states, and a review workflow for incoming purchase/subscription requests before they're approved and activated.",
+    stack: ["Next.js", "MongoDB", "Mongoose", "Tailwind CSS", "Express"],
+    liveUrl: "https://your-salon-saas-live-link.example.com",
+    githubUrl: "https://github.com/shafayat783593",
+    challenges:
+      "Aggregating accurate earnings summaries across many tenants without slowing down the dashboard required carefully indexed Mongoose aggregation pipelines instead of pulling raw documents into memory.",
+    improvements:
+      "Planned: role-based permissions inside the super admin panel itself, exportable CSV/PDF earnings reports, and webhook-based subscription renewal reminders.",
+  },
+
   {
+    slug: "realtime-chat",
+    name: "Realtime Customer-Admin Chat",
+    image: "/images/project-chat.svg",
+    summary:
+      "Foundational real-time chat system between customers and admins with typing indicators and unread counts.",
+    description:
+      "A standalone real-time chat module built with Socket.IO, featuring in-memory conversation storage, live typing indicators, and unread message counts per conversation. It was later folded into NovaShop as its support-chat layer.",
+    stack: ["Next.js", "Socket.IO", "Node.js", "Express"],
+    liveUrl: "https://your-chat-demo-live-link.example.com",
+    githubUrl: "https://github.com/shafayat783593",
+    challenges:
+      "Keeping the widget visually stable was tricky: Framer Motion's CSS transforms broke a position: fixed chat widget in Chrome and Firefox. Rendering it through a React portal straight onto document.body solved the positioning bug for good.",
+    improvements:
+      "Future plans: move conversation storage from memory to MongoDB for persistence across restarts, add file/image attachments, and add read receipts.",
+  },
+
+
+    {
     slug: "realtime-chat",
     name: "Realtime Customer-Admin Chat",
     image: "/images/project-chat.svg",

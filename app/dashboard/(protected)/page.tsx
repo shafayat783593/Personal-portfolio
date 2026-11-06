@@ -47,7 +47,9 @@ export default async function DashboardOverview() {
             <span className="text-3xl font-bold">{messageCount}</span>
           </div>
           <p className="mt-3 text-sm font-medium">Contact Messages</p>
-          <p className="mt-3 text-xs text-mist-400">Sent to your inbox via email + saved here</p>
+          <Link href="/dashboard/messages" className="focus-ring mt-3 inline-flex items-center gap-1 text-xs font-semibold text-violet-400 hover:text-violet-300">
+            View messages <ArrowUpRight size={14} />
+          </Link>
         </div>
       </div>
 
